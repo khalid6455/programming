@@ -2,13 +2,14 @@ class Solution(object):
     def dailyTemperatures(self, temperatures):
         self.temperatures = temperatures
         new_list = [0]*len(temperatures)
-        max = [0]
-        for k in range(len(temperatures)):
-            if temperatures[k] > max:
-                max = temperatures[k]
+        
 
         for i in range(len(temperatures)):
             current = temperatures[i]
+            max = temperatures[i]
+            for k in range(i,len(temperatures)):
+                if temperatures[k] > max:
+                    max = temperatures[k]
             for j in range(i+1,len(temperatures)):
                 if current == max:
                     
