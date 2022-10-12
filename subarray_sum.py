@@ -12,8 +12,7 @@ class Solution(object):
                 sum += nums[j]
                 if sum == k:
                     count += 1
-                    sum = 0
-                    break
+                   
             
        
         return count
